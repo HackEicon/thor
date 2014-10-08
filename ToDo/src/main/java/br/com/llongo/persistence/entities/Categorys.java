@@ -27,8 +27,6 @@ public class Categorys implements Serializable {
 	@Column
 	private String labelColor;
 	
-	@OneToMany(mappedBy="categorys")
-	private Set<Products> products;
 	
 	
 	public Integer getId() {
@@ -69,10 +67,5 @@ public class Categorys implements Serializable {
 		this.active = active;
 		this.labelColor = labelColor;
 	}
-	public Set<Products> getProducts() {
-		return products;
-	}
-	public void setProducts(Set<Products> products) {
-		this.products = products;
-	}
+
 }

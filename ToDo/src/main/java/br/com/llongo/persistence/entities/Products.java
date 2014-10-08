@@ -27,6 +27,8 @@ public class Products implements Serializable {
 	@Column
 	private String imagepath;
 	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "categoryId")
 	private Categorys categorys;
 	@Column
 	private Boolean active;
@@ -65,8 +67,7 @@ public class Products implements Serializable {
 		this.imagepath = imagepath;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "categorys_id")
+	
 	public Categorys getCategory() {
 		return this.categorys;
 	}

@@ -7,7 +7,7 @@ CREATE TABLE Task (
  labelColor VARCHAR(20)
 );
 
-CREATE TABLE categorys (
+CREATE TABLE Categorys (
  id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
  categoryname VARCHAR(50),
  description VARCHAR(200),
@@ -15,7 +15,7 @@ CREATE TABLE categorys (
  labelColor VARCHAR(20)
 );
 
-CREATE TABLE products (
+CREATE TABLE Products (
  id INT NOT NULL  PRIMARY KEY AUTO_INCREMENT,
  productname VARCHAR(50),
  description VARCHAR(200),
@@ -24,7 +24,7 @@ CREATE TABLE products (
  active BOOLEAN,
  price double default '0',
  FOREIGN KEY fk_categorys(categoryid) 
- REFERENCES categorys(id)
+ REFERENCES Categorys(id)
 );
 
 
