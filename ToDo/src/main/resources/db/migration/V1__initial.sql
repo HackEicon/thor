@@ -27,5 +27,6 @@ CREATE TABLE Products (
  REFERENCES Categorys(id)
 );
 
-
+INSERT INTO `todo`.`Categorys`(`categoryname`,`description`,`active`,`labelColor`)VALUES('categoria 1','desc categoria',true,'blue');
+INSERT INTO `todo`.`Products`(`productname`,`description`,`categoryid`,`active`,`price`)VALUES('produto 1','desc produto 1',1,true,33);
 
